@@ -1,0 +1,44 @@
+#==============#
+# Camera Model #
+#==============#
+
+Camera:
+  name: "ASUS_Z01KDA Video Quality HD 1280x720"
+  setup: "monocular"
+  model: "perspective"
+
+  fx: 944.1785542796918
+  fy: 968.2079106476523
+  cx: 643.2578284266918
+  cy: 373.90315935326237
+
+  k1: +0.2955871080712473
+  k2: -1.9439846707891602
+  p1: +0.002273422583171822
+  p2: +0.0016496921498087447
+  k3: +3.7086331438646893
+
+  fps: 30.0
+  cols: 1280
+  rows: 720
+
+  color_order: "RGB"
+
+#================#
+# ORB Parameters #
+#================#
+
+Feature:
+  max_num_keypoints: 1000
+  ini_max_num_keypoints: 2000
+  scale_factor: 1.2
+  num_levels: 8
+  ini_fast_threshold: 20
+  min_fast_threshold: 7
+
+#====================#
+# Mapping Parameters #
+#====================#
+
+Mapping:
+  baseline_dist_thr_ratio: 0.02
