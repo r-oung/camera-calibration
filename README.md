@@ -3,8 +3,11 @@ Standard [OpenCV Camera Calibration](https://docs.opencv.org/master/dc/dbb/tutor
 
 ## Setup
 Run `setup.sh` to create a virtual environment and install dependencies:
-```
+```shell
+git clone https://github.com/r-oung/camera-calibration.git
+cd camera-calibration/
 ./setup.sh
+. venv/bin/activate
 ```
 
 ## Usage
