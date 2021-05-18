@@ -30,7 +30,7 @@ Re-projection error: 0.023686000375385673
 
 ## Parameters
 | Variables | Description |
---- | --- | ---
+| :---: | :--- |
 | fx, fy | Focal length |
 | cx, cy | Optical center |
 | k1, k2, k3 | Radial distortion |
