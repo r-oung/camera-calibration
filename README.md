@@ -36,8 +36,9 @@ Re-projection error: 0.023686000375385673
 | k1, k2, k3 | Radial distortion |
 | p1, p2 | Tangential distortion |
 
-Re-projection error: The closer this value is to zero, the more accurate the parameters are.
+**Re-projection error**: The closer this value is to zero, the more accurate the parameters are.
 
 ## Issues
-Q: Pip install fails with ModuleNotFoundError: No module named 'skbuild'?
-A: Upgrade `pip` with `pip install --upgrade pip`. For details, see: https://github.com/opencv/opencv-python#frequently-asked-questions
+**Q**: Pip install fails with ModuleNotFoundError: No module named 'skbuild'?
+
+**A**: Upgrade `pip` with `pip install --upgrade pip`. For details, see: https://github.com/opencv/opencv-python#frequently-asked-questions
