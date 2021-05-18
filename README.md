@@ -1,6 +1,14 @@
 # Camera Calibration
+Standard [OpenCV Camera Calibration](https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html)
+
+## Setup
+Run `setup.sh` to create a virtual environment and install dependencies:
+```
+./setup.sh
+```
 
 ## Usage
+Take photos (at least 10) of the chessboard pattern `patterns/chessboard.png` from various angles. Replace the sample photos in the `images` folder with the ones you took. Run the script:
 ```shell
 python calibrate images/
 
@@ -20,37 +28,16 @@ k3: +0.04347981037293046
 Re-projection error: 0.023686000375385673
 ```
 
-## Brief Explanation of Parameters
-fx, fy Focal length
-cx, cy Optical center
-k1, k2, k3: Radial distortion
-p1, p2: Tangential distortion
+## Parameters
+| Variables | Description |
+--- | --- | ---
+| fx, fy | Focal length |
+| cx, cy | Optical center |
+| k1, k2, k3 | Radial distortion |
+| p1, p2 | Tangential distortion |
 
-## Notes: ORB Parameters
-```
-# ORB Extractor: Number of features per image
-ORBextractor.nFeatures: 2000
-
-# ORB Extractor: Scale factor between levels in the scale pyramid 	
-ORBextractor.scaleFactor: 1.2
-
-# ORB Extractor: Number of levels in the scale pyramid	
-ORBextractor.nLevels: 8
-
-# ORB Extractor: Fast threshold
-# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
-
-# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
-
-# You can lower these values if your images have low contrast			
-ORBextractor.iniThFAST: 20
-ORBextractor.minThFAST: 7
-```
-https://github.com/raulmur/ORB_SLAM2/issues/833#issue-515672777
+Re-projection error: The closer this value is to zero, the more accurate the parameters are.
 
 ## Issues
 Q: Pip install fails with ModuleNotFoundError: No module named 'skbuild'?
-A: See https://github.com/opencv/opencv-python#frequently-asked-questions
-
-## References
-- [OpenCV Camera Calibration](https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html)
+A: Upgrade `pip` with `pip install --upgrade pip`. For details, see: https://github.com/opencv/opencv-python#frequently-asked-questions
