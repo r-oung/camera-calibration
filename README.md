@@ -1,14 +1,18 @@
 # Camera Calibration
 Standard [OpenCV Camera Calibration](https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html)
 
+
 ## Setup
 Run `setup.sh` to create a virtual environment and install dependencies:
 ```shell
-git clone https://github.com/r-oung/camera-calibration.git
-cd camera-calibration/
 ./setup.sh
-. venv/bin/activate
 ```
+
+Activate the virtual environment:
+```shell
+source venv/bin/activate
+```
+
 
 ## Usage
 Take photos (at least 10) of the chessboard pattern `patterns/chessboard.png` from various angles. Replace the sample photos in the `images` folder with the ones you took. Run the script:
@@ -31,6 +35,7 @@ k3: +0.04347981037293046
 Re-projection error: 0.023686000375385673
 ```
 
+
 ## Parameters
 | Variables | Description |
 | :---: | :--- |
@@ -41,7 +46,8 @@ Re-projection error: 0.023686000375385673
 
 **Re-projection error**: The closer this value is to zero, the more accurate the parameters are.
 
-## Issues
-**Q**: Pip install fails with ModuleNotFoundError: No module named 'skbuild'?
 
-**A**: Upgrade `pip` with `pip install --upgrade pip`. For details, see: https://github.com/opencv/opencv-python#frequently-asked-questions
+## Troubleshooting
+_`pip install` fails with `ModuleNotFoundError: No module named 'skbuild'`_
+
+Upgrade `pip` with `pip install --upgrade pip`. For details, see: https://github.com/opencv/opencv-python#frequently-asked-questions
